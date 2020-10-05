@@ -29,7 +29,7 @@
   ```
 
   - vite
-  尤大大最近着重开发的一个工具，意在替代webpack打包，核心是利用浏览器现在已经支持import，遇到import会使用http请求去加载文件，使用vite拦截这些请求，进行分类以及预编译，最后使用rollup进行打包，节省了大部分时间，实现复杂项目秒开
+  尤大大最近着重开发的一个工具，意在替代webpack打包，核心是利用浏览器现在已经支持import，遇到import会使用http请求去加载文件，在vite中使用koa拦截这些请求，进行分类以及预编译，加载各个模块，在build时候使用rollup进行打包，节省了大部分时间，实现复杂项目秒开
   ```js
   npm install -g create-vite-app
   create-vite-app vue3-vite
