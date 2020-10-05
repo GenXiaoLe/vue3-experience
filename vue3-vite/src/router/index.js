@@ -1,20 +1,24 @@
-import VueRouter from 'vue-router'
-import Vue from 'vue'
+import { createRouter, createWebHistory } from 'vue-router'
 
-import Home from '../page/home'
-
-Vue.use(VueRouter)
+import Home from '../page/home.vue'
+import Count from '../page/firstPage.vue'
 
 const routes = [
   {
     path: '/',
     name: '首页',
     component: Home
+  },
+  {
+    path: '/count',
+    name: '计数页',
+    component: Count
   }
 ]
 
-const Router = new VueRouter({
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
   routes
 })
 
-export default Router
+export default router

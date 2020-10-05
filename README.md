@@ -45,3 +45,16 @@
 ### vue3初体验
   - Composition API体验 setup reactive ref computed等
   - Fragment Vue3支持多个根节点 不会再报错 虽然一些纠错工具依然会标红....
+
+
+### vue3 配套的库
+  - vue-router 4.x
+    - 安装方式
+    ```
+      npm install vue-router@next
+    ```
+    - 使用
+    ```js
+    // route注册
+
+    ```
