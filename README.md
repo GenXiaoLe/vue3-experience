@@ -48,6 +48,11 @@
 
 
 ### vue3 配套的库
+  - 一键升级vuex和vue-router
+  ```
+    vue add vue-next
+  ```
+
   - vue-router 4.x
     - 安装方式
     ```
@@ -56,5 +61,52 @@
     - 使用
     ```js
     // route注册
+    import { createRouter, createWebHistory } from 'vue-router'
 
+    const routes = [
+      // ...
+    ]
+
+    const router = createRouter({
+      history: createWebHistory(process.env.BASE_URL),
+      routes
+    })
+
+    export default router
+
+    // 使用 组件相同 Link Router-view组件
+    <link to="xxx" />
+    <router-view /></router-view>
+
+    // 方法调用
+    import { useRouter } from 'vue-router'
+    const router = useRouter()
+
+    router.push('xxx', query: {})
+    ```
+
+  - vuex 4.x
+  > vuex 在api方面没有太大改动 总体使用方式基本一致
+    - 安装方式
+    ```
+      npm install vuex@next
+    ```
+
+    - 使用
+    ```js
+      // vuex注册
+      import { createStore } from 'vuex'
+
+      export default createStore({
+        state: {},
+        mutations: {},
+        actions: {},
+        getters: {},
+        modules: {}
+      })
+
+      // 获取store
+      import { useStore } from 'vuex'
+
+      store = userStore()
     ```
